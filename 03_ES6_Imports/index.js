@@ -1,3 +1,3 @@
-import greet from './greet';
+import greet from './greet.js';
 
-greet('Daniel'); // Error
+greet('Daniel'); // Hello Daniel
