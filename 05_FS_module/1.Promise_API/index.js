@@ -9,9 +9,17 @@ import * as fs from 'fs/promises';
 } */
 
 // Read the content
-try {
+/* try {
 	const files = await fs.readdir('./05_FS_module/1.Promise_API');
 	console.log('Files:', files);
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Remove Folder / Directory
+try {
+	await fs.rmdir('./05_FS_module/1.Promise_API/newFolder');
+	console.log('Folder removed');
 } catch (err) {
 	console.error('Error:', err);
 }
