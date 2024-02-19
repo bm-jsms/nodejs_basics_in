@@ -2,6 +2,10 @@ import http from 'http';
 
 // Create a server
 const server = http.createServer((req, res) => {
+	res.statusCode = 404;
+	res.setHeader('Content-Type', 'text/html');
+	res.statusMessage = 'Not Found';
+
 	res.write('<h1>Hello Nodejs</h1>');
 });
 
