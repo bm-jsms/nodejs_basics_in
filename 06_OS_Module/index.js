@@ -10,4 +10,6 @@ import os from 'os';
 
 // console.log(os.homedir());
 
-console.log(os.networkInterfaces());
+// console.log(os.networkInterfaces());
+
+console.log(os.totalmem());
