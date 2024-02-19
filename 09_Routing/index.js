@@ -11,11 +11,10 @@ const server = http.createServer((req, res) => {
 		res.end('<h1>About Page</h1>');
 	} else {
 		res.end('<h1>404 Not Found</h1>');
+		res.writeHead(404, {
+			'Content-Type': 'text/html',
+		});
 	}
-
-	res.writeHead(200, 'OK', {
-		'Content-Type': 'text/html',
-	});
 });
 
 // Listen Server
