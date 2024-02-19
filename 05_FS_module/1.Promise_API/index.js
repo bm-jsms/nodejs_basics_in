@@ -44,12 +44,23 @@ import * as fs from 'fs/promises';
 } */
 
 // Append File in the new line
-try {
+/* try {
 	await fs.appendFile(
 		'./05_FS_module/1.Promise_API/File.txt',
 		'\nI am learning Node.js',
 	);
 	console.log('Data appended');
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Copy File
+try {
+	await fs.copyFile(
+		'./05_FS_module/1.Promise_API/File.txt',
+		'./05_FS_module/1.Promise_API/README.md',
+	);
+	console.log('File copied');
 } catch (err) {
 	console.error('Error:', err);
 }
