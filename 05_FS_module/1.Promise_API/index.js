@@ -33,12 +33,23 @@ import * as fs from 'fs/promises';
 } */
 
 // Read File
-try {
+/* try {
 	const data = await fs.readFile(
 		'./05_FS_module/1.Promise_API/File.txt',
 		'utf-8',
 	);
 	console.log('Data:', data);
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Append File in the new line
+try {
+	await fs.appendFile(
+		'./05_FS_module/1.Promise_API/File.txt',
+		'\nI am learning Node.js',
+	);
+	console.log('Data appended');
 } catch (err) {
 	console.error('Error:', err);
 }
