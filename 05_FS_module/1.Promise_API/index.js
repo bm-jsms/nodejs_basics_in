@@ -25,9 +25,20 @@ import * as fs from 'fs/promises';
 } */
 
 // Create and Write to a file
-try {
+/* try {
 	await fs.writeFile('./05_FS_module/1.Promise_API/File.txt', 'Hello World');
 	console.log('File created and written');
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Read File
+try {
+	const data = await fs.readFile(
+		'./05_FS_module/1.Promise_API/File.txt',
+		'utf-8',
+	);
+	console.log('Data:', data);
 } catch (err) {
 	console.error('Error:', err);
 }
