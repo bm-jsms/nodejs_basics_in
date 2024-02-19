@@ -55,12 +55,23 @@ import * as fs from 'fs/promises';
 } */
 
 // Copy File
-try {
+/* try {
 	await fs.copyFile(
 		'./05_FS_module/1.Promise_API/File.txt',
 		'./05_FS_module/1.Promise_API/README.md',
 	);
 	console.log('File copied');
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Get File Information
+try {
+	const inf = await fs.stat('./05_FS_module/1.Promise_API/File.txt');
+	console.log('Stats:', inf);
+
+	console.log(inf.isDirectory());
+	console.log(inf.isFile());
 } catch (err) {
 	console.error('Error:', err);
 }
