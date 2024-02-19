@@ -1,5 +1,7 @@
 import http from 'http';
 
+const port = 8000;
+
 // Create a server
 const server = http.createServer((req, res) => {
 	/* res.statusCode = 404;
@@ -14,6 +16,6 @@ const server = http.createServer((req, res) => {
 });
 
 // Listen on port 8000
-server.listen(8000, () => {
-	console.log('Server is listening on port 8000');
+server.listen(port, () => {
+	console.log(`Server is running on port: ${port}`);
 });
