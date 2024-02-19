@@ -2,7 +2,7 @@ import http from 'http';
 
 // Create a server
 const server = http.createServer((req, res) => {
-	res.end('Hello World');
+	res.write('<h1>Hello Nodejs</h1>');
 });
 
 // Listen on port 8000
