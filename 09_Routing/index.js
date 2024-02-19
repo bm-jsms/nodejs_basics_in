@@ -17,3 +17,8 @@ const server = http.createServer((req, res) => {
 		'Content-Type': 'text/html',
 	});
 });
+
+// Listen Server
+server.listen(port, () => {
+	console.log(`Server is running on port: ${port}`);
+});
