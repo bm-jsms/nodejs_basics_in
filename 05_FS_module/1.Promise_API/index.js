@@ -17,9 +17,17 @@ import * as fs from 'fs/promises';
 } */
 
 // Remove Folder / Directory
-try {
+/* try {
 	await fs.rmdir('./05_FS_module/1.Promise_API/newFolder');
 	console.log('Folder removed');
+} catch (err) {
+	console.error('Error:', err);
+} */
+
+// Create and Write to a file
+try {
+	await fs.writeFile('./05_FS_module/1.Promise_API/File.txt', 'Hello World');
+	console.log('File created and written');
 } catch (err) {
 	console.error('Error:', err);
 }
